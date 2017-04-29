@@ -2,14 +2,14 @@
     .layout-container
         .layout-column(style="flex-basis: 37px")
             button.date-picker__prev(type="button", title="Previous month")
-                coral-icon(icon="left", ng-click="$ctrl.prevMonth()")
+                icon(icon="left", ng-click="$ctrl.prevMonth()")
         .layout-column(style="flex-basis: 72px")
             custom-select.date-picker-select-container(options="$ctrl.months", selected="$ctrl.selectedMonth", choose="$ctrl.selectMonth(value)")
         .layout-column(style="flex-basis: 72px")
             custom-select.date-picker-select-container(options="$ctrl.years", selected="$ctrl.selectedYear", choose="$ctrl.selectYear(value)")
         .layout-column(style="flex-basis: 37px")
             button.date-picker__next(type="button", title="Next month")
-                coral-icon(icon="right", ng-click="$ctrl.nextMonth()")
+                icon(icon="right", ng-click="$ctrl.nextMonth()")
     .layout-container
         .calendar
             .calendar__weekday(ng-repeat="$day in $ctrl.weekDays") {{$day}}
