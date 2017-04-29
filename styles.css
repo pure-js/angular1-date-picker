@@ -30,7 +30,8 @@
   box-shadow: 0 5px 8px 4px #0E0E0E;
   padding: 3px;
   left: -3px;
-  top: 24px; }
+  top: 24px;
+  width: 227px; }
   .date-picker__prev {
     float: left;
     padding: 0 3px;
@@ -52,30 +53,38 @@
     align-content: flex-start; }
     .date-picker-input-wrapper:hover {
       border: 1px solid #666570; }
-    .date-picker-input-wrapper_overlayed:hover {
-      border: 1px dotted #FF9933; }
+  .date-picker_overlayed:hover {
+    border: 1px dotted #FF9933; }
   .date-picker__input {
     text-align: right;
     height: 21px;
     border: none;
     display: flex;
     max-width: 115px;
-    padding-right: 5px; }
+    padding-right: 5px;
+    background: #000; }
     .date-picker__input:focus {
       border: none; }
-  .date-picker-overlay {
-    position: fixed;
-    z-index: 9;
-    height: 100vh;
-    width: 1000vh;
-    top: 0;
-    left: 0; }
+    .date-picker__input-overlay {
+      position: fixed;
+      z-index: 9;
+      height: 100vh;
+      width: 1000vh;
+      top: 0;
+      left: 0; }
   .date-picker__button {
     display: flex;
     flex: 0 0 23px;
     background: #000;
     padding: 0 0 0 2px;
-    height: 21px; }
+    height: 21px;
+    border: none;
+    box-shadow: none;
+    outline: none; }
+    .date-picker__button:focus {
+      border: none;
+      box-shadow: none;
+      outline: none; }
     .date-picker__button:hover {
       background: #000; }
     .date-picker__button_highlighted {
@@ -83,24 +92,13 @@
       border: 1px solid #1B252F; }
       .date-picker__button_highlighted:hover {
         background: #1B252F; }
-    .date-picker__button-container {
-      background: #3C3C42;
-      position: relative;
-      float: left;
-      width: 100%;
-      padding: 0 2px;
-      box-sizing: border-box; }
-
-button.date-picker__button {
-  border: none;
-  box-shadow: none;
-  outline: none; }
-  button.date-picker__button:focus {
-    border: none;
-    box-shadow: none;
-    outline: none; }
-  button.date-picker__button:not([readonly]):not([disabled-style]):focus {
-    border: none !important; }
+  .date-picker-select-container {
+    background: #3C3C42;
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 0 2px 3px;
+    box-sizing: border-box; }
 
 .calendar {
   width: 217px;
@@ -112,6 +110,7 @@ button.date-picker__button {
     border-right: 1px solid #0A0A0A;
     border-bottom: 1px solid #0A0A0A;
     width: calc(100% / 7);
+    margin: 0;
     background-color: #151516;
     color: #666570;
     font-size: 10px;
@@ -124,6 +123,7 @@ button.date-picker__button {
     border-right: 1px solid #0A0A0A;
     border-bottom: 1px solid #0A0A0A;
     width: calc(100% / 7);
+    margin: 0;
     background: #212124; }
   .calendar__day {
     padding: 0 0 2px;
@@ -141,12 +141,12 @@ button.date-picker__button {
       color: #FE973C; }
       .calendar__day_marked:hover {
         color: #FE973C; }
-    .calendar__day_active {
-      background-color: #FE973C;
-      color: #000; }
-      .calendar__day_active:hover {
+      .calendar__day_marked_active {
         background-color: #FE973C;
         color: #000; }
+        .calendar__day_marked_active:hover {
+          background-color: #FE973C;
+          color: #000; }
 
 .after-input {
   position: absolute;
@@ -196,7 +196,7 @@ button.date-picker__button {
     width: 100%;
     padding-left: 7px;
     padding-right: 17px;
-    border: none !important;
+    border: none;
     text-align: left;
     height: 22px;
     display: block;
@@ -208,7 +208,7 @@ button.date-picker__button {
       background-image: linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)); }
     .custom-select__option_present {
       height: 23px;
-      border: 1px solid #0A0A0A !important; }
+      border: 1px solid #0A0A0A; }
       .custom-select__option_present:focus {
         border: 1px dotted #FF9933; }
     .custom-select__option_current {
@@ -225,5 +225,8 @@ button.date-picker__button {
     z-index: 19;
     top: 0;
     left: 0; }
+.body-reset {
+  margin: 0;
+  background: #000; }
 
 /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdHlsZXMuY3NzIiwic291cmNlUm9vdCI6IiJ9*/
