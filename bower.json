@@ -1,0 +1,23 @@
+{
+  "name": "angular-date-picker",
+  "description": "Angular date picker component written in typescript",
+  "main": "src/date-picker.module.ts",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "date",
+    "picker",
+    "calendar"
+  ],
+  "homepage": "https://pure-js.github.io/angular1-date-picker",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "authors": [
+    "pure-js"
+  ]
+}

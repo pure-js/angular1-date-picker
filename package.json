@@ -1,0 +1,31 @@
+{
+  "name": "angular-date-picker",
+  "version": "1.0.0",
+  "description": "Angular date picker component written in typescript",
+  "main": "src/date-picker.module.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angular",
+    "date",
+    "picker",
+    "calendar"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.6.4"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "author": "pure-js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pure-js/angular1-date-picker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pure-js/angular1-date-picker/issues"
+  },
+  "homepage": "https://github.com/pure-js/angular1-date-picker#readme"
+}
