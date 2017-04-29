@@ -8,6 +8,7 @@
     "prod": "webpack && npm run lint && tsc",
     "start": "cross-env NODE_ENV=development webpack-dev-server",
     "dev": "cross-env NODE_ENV=development webpack && npm run lint",
+    "deploy": "gh-pages -d dist",
     "test": "cross-env NODE_ENV=test karma start",
     "lint": "tslint src/*.ts"
   },
@@ -42,6 +43,7 @@
     "cross-env": "^4.0.0",
     "css-loader": "^0.28.0",
     "extract-text-webpack-plugin": "^2.1.0",
+    "gh-pages": "^0.12.0",
     "html-webpack-plugin": "^2.28.0",
     "node-sass": "^4.5.2",
     "pug-html-loader": "^1.1.4",
