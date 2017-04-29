@@ -1,10 +1,11 @@
 
 export class DatePickerController {
-    static $inject = ["$scope", "$timeout"];
+    static $inject = ['$scope', '$timeout'];
     // Input
     public specifiedDate: Date;
     public open: boolean;
     public up: any;
+    public locale: string;
 
     // Day selected by user
     public selectedDay: number;
@@ -18,15 +19,27 @@ export class DatePickerController {
     public years: string[];
     public cellsBefore: number[];
     public cellsAfter: number[];
-    public weekDays: string[] = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
-    public months: string[] = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    public weekDays: string[];
+    public months: string[];
 
     constructor(private $scope: angular.IScope, private timeout: angular.ITimeoutService) {
 
     }
 
     public $onInit() {
+        this.locale = 'en-us';
+        this.weekDays = this.getWeekDays();
+        this.months = this.getMonths();
         this.setPickedDate(this.specifiedDate ? this.specifiedDate : new Date());
+    }
+
+    private getWeekDays() {
+        return ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
+    }
+
+    private getMonths() {
+        let date =  new Date();
+        return ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     }
 
     private setPickedDate(date: Date) {
@@ -42,8 +55,7 @@ export class DatePickerController {
     }
 
     public getCurrentMonth(date) {
-        let locale = "en-us";
-        return date.toLocaleString(locale, { month: "short" });
+        return date.toLocaleString(this.locale, { month: 'short' });
     }
 
     private getCellsBefore(date) {
