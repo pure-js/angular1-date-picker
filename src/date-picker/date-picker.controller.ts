@@ -21,24 +21,19 @@ export class DatePickerController {
     public weekDays: string[] = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
     public months: string[] = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-    constructor(private scope: angular.IScope, private timeout: angular.ITimeoutService) {
+    constructor(private $scope: angular.IScope, private timeout: angular.ITimeoutService) {
 
     }
 
     public $onInit() {
         this.setPickedDate(this.specifiedDate ? this.specifiedDate : new Date());
-
-        this.scope.$watch(() => {
-            return this.open;
-        }, () => {
-            this.setPickedDate(this.specifiedDate);
-        });
     }
 
     private setPickedDate(date: Date) {
         this.pickedDate = new Date(date);
         this.selectedDay = this.pickedDate.getDate();
         this.selectedMonth = this.getCurrentMonth(this.pickedDate);
+        console.log('here month', this.selectedMonth);
         this.selectedYear = this.pickedDate.getFullYear().toString();
         this.days = this.getDaysInMonth(this.pickedDate);
         this.years = this.yearsList();
@@ -65,14 +60,16 @@ export class DatePickerController {
     private getCellsAfter(date) {
         let cells = [];
         let added: any = this.getCellsBefore(this.pickedDate).length;
-        let month = date.getMonth(),
-            year = date.getFullYear();
-        let newDate: any = new Date(year, month + 1, 0);
+        let month = date.getMonth();
+        let year = date.getFullYear();
+        let newDate: Date = new Date(year, month + 1, 0);
         let d: any = newDate.getDate();
         let common = added + d;
         let emptyCells = 7 - (common % 7);
-        for(let i = 0; i < emptyCells; i++) {
-            cells.push(i);
+        if (emptyCells < 7) {
+            for (let i = 0; i < emptyCells; i++) {
+                cells.push(i);
+            }
         }
         return cells;
     }
