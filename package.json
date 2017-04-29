@@ -4,7 +4,12 @@
   "description": "Angular date picker component written in typescript",
   "main": "src/date-picker.module.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "bower install",
+    "prod": "cross-env NODE_ENV=production webpack && npm run lint && tsc",
+    "start": "cross-env NODE_ENV=development webpack-dev-server",
+    "dev": "cross-env NODE_ENV=development webpack && npm run lint && tsc",
+    "test": "cross-env NODE_ENV=test karma start",
+    "lint": "tslint src/service/*.ts"
   },
   "keywords": [
     "angular",

@@ -1,0 +1,13 @@
+# Node.js
+node_modules/
+*.log
+
+# Bower
+bower_components/
+
+# JetBrains IDE's
+.idea/workspace.xml
+.idea/tasks.xml
+
+# Distribution
+dist
