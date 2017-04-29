@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": "",
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": ["es6", "dom"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "target": "es5",
+    "outDir": "dist"
+  },
+  "include": ["src//*.ts", "demo/*.ts"],
+  "files" : ["./typings/index.d.ts"]
+}

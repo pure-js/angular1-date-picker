@@ -1,0 +1,11 @@
+.custom-select
+    button.custom-select__option.custom-select__option_present(type="button",
+        ng-click="$ctrl.open = true") {{$ctrl.selected}}
+    coral-icon.custom-select__icon(icon="down", ng-click="$ctrl.open = true")
+    .custom-select-options-list(ng-if="$ctrl.open")
+        button.custom-select__option(type="button",
+            ng-repeat="$option in $ctrl.options",
+            ng-class="{'custom-select__option_current': $option == $ctrl.selected}",
+            ng-click="$ctrl.pick($option)",
+            value="{{$option}}") {{$option}}
+    .custom-select-overlay(ng-if="$ctrl.open", ng-click="$ctrl.open = false")
