@@ -4,5 +4,10 @@ html(ng-app='datePickerDemo')
         meta(charset='utf-8')
         title Date picker demo
         meta(name='viewport', content='width=device-width, initial-scale=1')
-    body
-        date-picker(open='true', specified-date='new Date()')
+    body.body-reset
+        .date-picker-input-wrapper.date-picker-input-wrapper_overlayed
+            button.date-picker__button(type='button', ng-click='$isopen = !$isopen')
+                icon(icon='calendar')
+            input.date-picker__input(type='text',
+                ng-model='pricingMaturity')
+            date-picker.date-picker-wrapper(open='$isopen')

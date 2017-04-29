@@ -14,6 +14,7 @@ export class SelectController {
 
     public $onInit() {
         this.open = false;
+        console.log(this.selected);
     }
 
     public pick(value: string) {

@@ -6,6 +6,7 @@ export const DatePickerComponent: angular.IComponentOptions = {
     bindings: {
         specifiedDate: "=",
         open: "=",
-        up: "&"
+        up: "&",
+        locale: "@"
     }
 };
