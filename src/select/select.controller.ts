@@ -1,6 +1,6 @@
 
 export class SelectController {
-    public static $inject: string[] = ["$scope"];
+    public static $inject: string[] = ['$scope'];
     // Input
     public options: any[];
     public choose: any;

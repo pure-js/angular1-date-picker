@@ -1,7 +1,8 @@
 {
   "rulesDirectory": "node_modules/tslint-microsoft-contrib",
   "rules": {
-    "quotemark": [true, "double", "avoid-escape"],
+    "quotemark": [true, "single", "avoid-escape"],
+    "indent": [true, "spaces"],
     "variable-name": [true, "check-format", "allow-pascal-case"],
     "member-access": [true, "check-accessor"],
     "export-name": [true, "Controller", "Directive", "Service", "Module", "Component"]
