@@ -1,7 +1,7 @@
-import * as angular from "angular";
+import * as angular from 'angular';
 
 export const DataBarsAutoFocus = ($timeout: angular.ITimeoutService) => (<angular.IDirective> {
-    restrict: "A",
+    restrict: 'A',
     link($scope, $element, $attrs) {
         $scope.$watch($attrs.dataBarsAutoFocus, (newValue, oldValue) => {
             if (!newValue) {
@@ -12,4 +12,4 @@ export const DataBarsAutoFocus = ($timeout: angular.ITimeoutService) => (<angula
     }
 });
 
-DataBarsAutoFocus.$inject = ["$timeout"];
+DataBarsAutoFocus.$inject = ['$timeout'];

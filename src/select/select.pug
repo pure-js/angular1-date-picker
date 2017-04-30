@@ -1,7 +1,8 @@
 .custom-select
     button.custom-select__option.custom-select__option_present(type="button",
         ng-click="$ctrl.open = true") {{$ctrl.selected}}
-    coral-icon.custom-select__icon(icon="down", ng-click="$ctrl.open = true")
+    svg.custom-select__icon(xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24", ng-click="$ctrl.open = true")
+        path(d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z")
     .custom-select-options-list(ng-if="$ctrl.open")
         button.custom-select__option(type="button",
             ng-repeat="$option in $ctrl.options",

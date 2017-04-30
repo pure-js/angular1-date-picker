@@ -1,6 +1,6 @@
 
 export class DatePickerController {
-    static $inject = ['$scope', '$timeout'];
+    public static $inject = ['$scope', '$timeout'];
     // Input
     public specifiedDate: Date;
     public open: boolean;
