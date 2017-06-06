@@ -3,6 +3,7 @@ Date picker written in angular 1 + typescript
 
 # Development
 ```
+npm i
 npm start
 ```
 
