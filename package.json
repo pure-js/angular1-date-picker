@@ -5,10 +5,10 @@
   "main": "src/date-picker.module.ts",
   "homepage": "https://pure-js.github.io/angular1-date-picker/",
   "scripts": {
-    "prod": "webpack && npm run lint && tsc",
+    "build": "cross-env NODE_ENV=production webpack",
     "start": "cross-env NODE_ENV=development webpack-dev-server",
     "dev": "cross-env NODE_ENV=development webpack && npm run lint",
-    "predeploy": "webpack",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "test": "cross-env NODE_ENV=test karma start",
     "lint": "tslint src/*.ts"
@@ -55,6 +55,7 @@
     "tslint-loader": "^3.5.3",
     "tslint-microsoft-contrib": "^5.0.0",
     "typescript": "^2.3.2",
+    "uglifyjs-webpack-plugin": "^0.4.6",
     "webpack": "^2.7.0",
     "webpack-dev-server": "^2.4.5"
   }

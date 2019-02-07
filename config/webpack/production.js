@@ -67,36 +67,13 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.pug'
+      template: './demo/index.pug'
     }),
     new ProvidePlugin({
       "window.Q": "Q",
       "Q": "Q"
     }),
-    new CopyWebpackPlugin([
-      {from: 'app.json'},
-      {
-        context: 'bower_components/jet-plugin-settings',
-        from: 'src/*'
-      },
-      {
-        context: 'bower_components/jet-plugin-quotes2',
-        from: 'src/*'
-      },
-      {
-        context: 'bower_components/jet-plugin-apphits',
-        from: 'src/*'
-      },
-      {
-        context: 'bower_components/jet-service-adapter',
-        from: 'services/*'
-      },
-      {
-        context: 'bower_components/uifr-core-style/resources',
-        from: '**/*',
-        to: 'styles'
-      }
-    ]),
+    new CopyWebpackPlugin(),
     new UglifyJSPlugin(),
     new CommonsChunkPlugin({
       name: "vendor",
