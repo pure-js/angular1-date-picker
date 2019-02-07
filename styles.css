@@ -34,7 +34,7 @@
   width: 227px; }
   .date-picker__prev {
     float: left;
-    padding: 0 3px;
+    padding: 0 0;
     margin: 0 0 3px 0; }
   .date-picker__next {
     float: right;
@@ -80,7 +80,8 @@
     height: 21px;
     border: none;
     box-shadow: none;
-    outline: none; }
+    outline: none;
+    fill: #fff; }
     .date-picker__button:focus {
       border: none;
       box-shadow: none;
@@ -228,5 +229,3 @@
 .body-reset {
   margin: 0;
   background: #000; }
-
-/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdHlsZXMuY3NzIiwic291cmNlUm9vdCI6IiJ9*/
